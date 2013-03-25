@@ -40,7 +40,7 @@ public class MainActivity extends Activity {
 			Log.d("main", "button onclick set!");
 			
 		} catch (Exception e) {
-			Log.d("main", "ERROR: " + e.getMessage());
+			Log.d("main", "ERROR: " + e.getMessage(), e);
 		} 
 		
 	}
@@ -81,7 +81,7 @@ public class MainActivity extends Activity {
 			TextView main = (TextView) findViewById(R.id.mainTextview);
 			main.setText(result.toString());
 		} catch (Exception e) {
-			
+			Log.d("main", "ERROR: " + e.getMessage(), e);
 		}
 		
 	}

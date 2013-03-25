@@ -8,15 +8,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <Button
-        android:id="@+id/go"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/num2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:text="@string/buttonText" />
-
     <TextView
         android:id="@+id/mainTextview"
         android:layout_width="wrap_content"
@@ -29,6 +20,20 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textSize="20pt" />
 
+    <EditText
+        android:id="@+id/num1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mainTextview"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="47dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:maxLength="9"
+        android:text="@string/defaultFirstNum" >
+        <requestFocus />
+    </EditText>
+    
     <Spinner
         android:id="@+id/op"
         android:layout_width="wrap_content"
@@ -47,21 +52,18 @@
         android:layout_below="@+id/op"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:inputType="number"
+        android:inputType="numberSigned"
+        android:maxLength="9"
         android:text="@string/defaultSecondNum" />
 
-    <EditText
-        android:id="@+id/num1"
+    <Button
+        android:id="@+id/go"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/mainTextview"
+        android:layout_below="@+id/num2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="47dp"
-        android:ems="10"
-        android:inputType="number"
-        android:text="@string/defaultFirstNum" >
-
-        <requestFocus />
-    </EditText>
+        android:layout_marginTop="15dp"
+        android:text="@string/buttonText" />
+    
 
 </RelativeLayout>
