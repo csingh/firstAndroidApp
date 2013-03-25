@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+import java.text.DecimalFormat;
 
 public class MainActivity extends Activity {
 
@@ -58,8 +59,9 @@ public class MainActivity extends Activity {
 			EditText num1Box = (EditText) findViewById(R.id.num1);
 			EditText num2Box = (EditText) findViewById(R.id.num2);
 			
-			Integer num1 = Integer.valueOf(num1Box.getText().toString());
-			Integer num2 = Integer.valueOf(num2Box.getText().toString());
+			Double num1 = Double.valueOf(num1Box.getText().toString());
+			Double num2 = Double.valueOf(num2Box.getText().toString());
+			Double result = 0.0;
 			
 			// Get operator
 			Spinner ops = (Spinner) findViewById(R.id.op);
@@ -70,16 +72,25 @@ public class MainActivity extends Activity {
 			Log.d("main", "Operator: " + op);
 			
 			// Calculate
-			Integer result = 0;
-			if (op.equals("add")) {
+			if (op.equals("+")) {
 				result = num1 + num2;
-			} else if (op.equals("sub")) {
+			} else if (op.equals("-")) {
 				result = num1 - num2;
+			} else if (op.equals("x")) {
+				result = num1 * num2;
+			} else if (op.equals("/")) {
+				result = num1 / num2;
 			}
+			
+			// Truncate Double result
+			String resultStr = new DecimalFormat("#.#########").format(result);
+			
+			Log.d("main", "resultNum: " + result);
+			Log.d("main", "resultStr: " + resultStr);
 			
 			// Print result
 			TextView main = (TextView) findViewById(R.id.mainTextview);
-			main.setText(result.toString());
+			main.setText(resultStr);
 		} catch (Exception e) {
 			Log.d("main", "ERROR: " + e.getMessage(), e);
 		}

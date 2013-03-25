@@ -28,7 +28,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="47dp"
         android:ems="10"
-        android:inputType="numberSigned"
+        android:inputType="numberDecimal"
         android:maxLength="9"
         android:text="@string/defaultFirstNum" >
         <requestFocus />
@@ -52,7 +52,7 @@
         android:layout_below="@+id/op"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:inputType="numberSigned"
+        android:inputType="numberDecimal"
         android:maxLength="9"
         android:text="@string/defaultSecondNum" />
 
