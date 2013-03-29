@@ -3,4 +3,4 @@ firstAndroidApp
 
 My first Android application, just a test of random stuff.
 
-Nothing really that useful (yet) :P
+For now it just serves as a really basic claculator, nothing really that useful (yet) :P
